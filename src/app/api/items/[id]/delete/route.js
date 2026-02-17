@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth/next'
-import { authOptions } from '../../../../pages/api/auth/[...nextauth]'
-import { isAdminEmail } from '../../../../lib/auth'
-import { softDeleteNode } from '../../../../lib/db'
+import { authOptions } from '../../../../../pages/api/auth/[...nextauth]'
+import { isAdminEmail } from '../../../../../lib/auth'
+import { softDeleteNode } from '../../../../../lib/db'
 
 export async function POST(_req, { params }) {
   const session = await getServerSession(authOptions)
